@@ -1,0 +1,23 @@
+load("@rules_java//java:defs.bzl", "java_binary")
+load("//:rule.bzl", "resource_rule", "consumer_rule")
+
+java_binary(
+    name = "create_file",
+    srcs = ["CreateFile.java"],
+    main_class = "CreateFile",
+)
+
+java_binary(
+    name = "consume_files",
+    srcs = ["Consumer.java"],
+    main_class = "Consumer",
+)
+
+resource_rule(
+    name = "res"
+)
+
+consumer_rule(
+    name = "consumer",
+    resources = [":res"]
+)

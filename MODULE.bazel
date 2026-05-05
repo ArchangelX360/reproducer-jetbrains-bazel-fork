@@ -1,0 +1,11 @@
+module(
+    name = "reproducer",
+    version = "0.1.0",
+)
+
+bazel_dep(name = "llvm", version = "0.7.7")
+
+register_toolchains("@llvm//toolchain:all")
+
+bazel_dep(name = "rules_java", version = "8.14.0")
+# register_toolchains("@bazel_tools//tools/python:autodetecting_toolchain")

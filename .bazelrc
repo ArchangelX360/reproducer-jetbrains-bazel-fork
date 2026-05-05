@@ -1,0 +1,2 @@
+common --disk_cache=C:/ProgramData/reproducer/dc
+common --output_user_root=C:/ProgramData/reproducer/out
